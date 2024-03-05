@@ -1,8 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+div{
+  padding: 0.5em;
+}
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:antiquewhite;
+
 }
 
 a {
   color: #00B7FF;
+}
+
+header{
+  background: linear-gradient(rgba(0, 183, 255, 0.2), rgba(0, 183, 255, 0.1), antiquewhite);
+  text-align: center;
+  padding: 18px;
+  h1{
+    color: red;
+  }
+}
+
+main{
+  padding: 0 5px;
+}
+
+hr{
+  color: lightgray;
+  border: none;
+  border-top: solid lightgray 1px;
+}
+
+.post{
+  background-color:lightblue;
+  width: fit-content;
+  margin: 1em;
+  >div{
+    width: fit-content;
+  }
 }

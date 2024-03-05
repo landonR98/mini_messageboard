@@ -1,5 +1,37 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header 
+    h1= title
+    p Welcome to #{title}
+    a(href="/new")
+      button Make a Post
+  main
+    hr
+    div#top
+      a(href="/#bottom") 
+        button Bottom
+      button Update 
+      label(for="auto-top") 
+        input(type="checkbox", name="auto-top") 
+        |Auto 
+    hr 
+      
+    each post, i in posts
+      div.post(id=`post_${i}`)
+        div.info 
+          span.post-user #[strong=post.user] 
+          |&nbsp;
+          span.post-date=post.added
+        div.post-text
+          p=post.text
+
+    hr
+    div#bottom
+      a(href="/#top") 
+        button Top
+      button Update 
+      label(for="auto-bottom") 
+        input(type="checkbox", name="auto-bottom") 
+        |Auto 
+    hr 
