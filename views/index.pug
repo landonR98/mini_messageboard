@@ -16,15 +16,16 @@ block content
         input(type="checkbox", name="auto-top") 
         |Auto 
     hr 
-      
-    each post, i in posts
-      div.post(id=`post_${i}`)
-        div.info 
-          span.post-user #[strong=post.user] 
-          |&nbsp;
-          span.post-date=post.added
-        div.post-text
-          p=post.text
+    
+    div.posts
+      each post, i in posts
+        div.post(id=`post_${i}`)
+          div.info 
+            span.post-user #[strong=post.user] 
+            |&nbsp;
+            span.post-date=post.added
+          div.post-text
+            p=post.text
 
     hr
     div#bottom
