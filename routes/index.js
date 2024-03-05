@@ -25,7 +25,26 @@ router.get("/new", (req, res, next) => {
 });
 
 router.post("/new", (req, res, next) =>{
-  res.redirect("/")
+  /** @type {string} */
+  let user = (req.body.user? req.body.user: "").trim()
+  if (user === ""){
+    user = "Anonymous"
+  }
+
+  /** @type {string} */
+  const messageText = (req.body.messageText? req.body.messageText: "").trim()
+  if (messageText === ""){
+    res.render("form", {title: "New Message", user: user, error:"Message must not be empty"})
+
+  }else{
+    messages.push({
+      text: messageText,
+      user: user,
+      added: new Date()
+    })
+    
+    res.redirect("/")
+  }
 })
 
 module.exports = router;
