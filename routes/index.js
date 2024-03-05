@@ -21,7 +21,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/new", (req, res, next) => {
-  res.render("index", { title: "New Message" });
+  res.render("form", { title: "New Message" });
 });
 
 router.post("/new", (req, res, next) =>{

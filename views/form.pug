@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+  header 
+    h1=title 
+  main 
+    center 
+      form(action="/new" method="POST") 
+        label(for="user") 
+          p User 
+          input(type="text" name="user")
+        label(for="messageText")
+          p Message
+          textarea(name="messageText", cols="30", rows="10") 
+        div.space-between
+          button(type="submit") Submit 
+          a(href="/")
+            button(type="button") Cancel

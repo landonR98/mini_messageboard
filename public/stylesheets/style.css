@@ -11,6 +11,11 @@ body {
 
 }
 
+button{
+  margin: 0 2px;
+  padding: 1px;
+}
+
 a {
   color: #00B7FF;
 }
@@ -34,11 +39,31 @@ hr{
   border-top: solid lightgray 1px;
 }
 
+.space-between{
+  display: flex;
+  justify-content: space-between;
+}
+
 .post{
   background-color:lightblue;
   width: fit-content;
   margin: 1em;
+  border: outset lightblue 1px;
   >div{
     width: fit-content;
+  }
+}
+
+form{
+  text-align: left;
+  width: fit-content;
+  background-color: lightblue;
+  padding: 1em;
+  border: outset lightblue 1px;
+  label{
+    display: block;
+  }
+  input[type="text"], textarea{
+    width: 100%;
   }
 }
