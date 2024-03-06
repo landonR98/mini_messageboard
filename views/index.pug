@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  script(type="module", src="javascripts/script.js")
   header 
     h1= title
     p Welcome to #{title}
@@ -11,10 +12,11 @@ block content
     div#top
       a(href="/#bottom") 
         button Bottom
-      button Update 
+      button.update-btn Update 
       label(for="auto-top") 
         input(type="checkbox", name="auto-top") 
         |Auto 
+        span.update-counter
     hr 
     
     div.posts
@@ -31,8 +33,9 @@ block content
     div#bottom
       a(href="/#top") 
         button Top
-      button Update 
+      button.update-btn Update 
       label(for="auto-bottom") 
         input(type="checkbox", name="auto-bottom") 
         |Auto 
+        span.update-counter
     hr 
